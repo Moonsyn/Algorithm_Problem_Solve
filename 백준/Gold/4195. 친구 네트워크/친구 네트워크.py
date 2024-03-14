@@ -7,7 +7,6 @@ def find(v):
     else:
         # 경로 압축
         parent_ids[v] = find(parent_ids[v])
-        # print(parent_ids)
         return parent_ids[v]
 
 
@@ -24,7 +23,6 @@ for _ in range(t):
     parent_ids = dict()
     for network in range(f):  # 100,000
         a,b = input().split(" ")
-        # print("input is {}, {}".format(a,b))
         if a not in parent_ids and b not in parent_ids:
             parent_ids[a] = a
             parent_ids[b] = a
@@ -49,6 +47,3 @@ for _ in range(t):
             root_b = find(b)
             union(root_a, root_b)
             print(len(friends[root_a]))
-
-        # print(parent_ids)
-        # print(friends)
