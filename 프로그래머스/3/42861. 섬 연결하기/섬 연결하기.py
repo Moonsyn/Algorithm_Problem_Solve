@@ -8,6 +8,7 @@ def union_find(parents, a, b):
     
     return parents
 
+
 def solution(n, costs):
     answer = 0
     
